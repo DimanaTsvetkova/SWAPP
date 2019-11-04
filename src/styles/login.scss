@@ -1,0 +1,61 @@
+@import './global';
+
+.main-bg {
+    width: 100%;
+    height: 100vh;
+    background: $light-background-color;
+    display: flex;
+    flex-flow: column;
+
+
+
+
+
+    .container {
+        background: #333333;
+        margin: 5% 10%;
+        height: fit-content;
+        padding: 1em;
+        .logo {
+            text-align: center;
+            font-family: $logo-font, sans-serif;
+            color: $logo-color;
+            font-size: 3em;
+        }
+
+        form {
+            display: flex;
+            flex-flow: column;
+            width: 90%;
+            margin: auto;
+            background-color: $light-card-background;
+            border-radius: 7px;
+            border: 1px solid $light-card-border;
+            padding: 1em;
+            .err{
+                color: $error-color;
+            }
+            .input-field {
+                margin: 1em;
+                background: $light-input-background;
+                border: 1px solid $light-input-border;
+                border-radius: 2px;
+                padding: 0.2em;
+            }
+
+            .btn {
+                width: 34%;
+                align-self: flex-end;
+                background: $light-btn-background;
+                border: 1px solid $light-btn-border;
+                color: $light-btn-font;
+                font-size: 1em;
+                font-weight: bold;
+                padding: 0.5em 1em;
+                margin: 0 1em 0 0;
+                border-radius: 10px;
+            
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Galaxy';
+    src: url('../assets/fonts/SfDistantGalaxy.ttf');
+
+}
+$error-color: #E67453;
+$logo-color:#FFE300;
+$logo-font: 'Galaxy';
+$main-login-background: #333;
+// light theme
+$light-background-color: #E8EAED;
+$light-font-color: #4E5B6E;
+// card
+$light-card-border:#E5E9F2;
+$light-card-background: #FFF;
+//solid btns
+$light-btn-background:  #000;
+$light-btn-border:#E5E9F2;
+$light-btn-font:#FFE300;
+// outline buttons?
+// inputs
+$light-input-background:  #EFF2F7;
+$light-input-border:  #E5E9F2;
+$light-input-font:#3C4858;
+// app bar
+$light-navbar-background: #000;
+$light-navbar-border: #333;
+$light-navbar-font: #4BD5EE;
+
