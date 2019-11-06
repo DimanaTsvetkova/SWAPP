@@ -1,0 +1,27 @@
+@import './global';
+.episode-card{
+    width: 80%;
+    background: #ffffff;
+    height: 100%;
+    img{
+        width: 100%;
+        max-width: 100%;
+        border: 1px solid $light-card-border;
+        border-radius: 8px 8px 0  0 ;
+    }
+    .episode-title{
+        font-family:$jedy-font;
+        color: $light-navbar-font;
+        letter-spacing: 2px;
+        padding: 1em;
+    }
+    .crawl{ 
+        font-family: $main-font;
+        color: $light-font-color;
+        padding: 1em;
+    }
+    &:hover{
+        transition: all 0.4s;
+        box-shadow: 10px 21px 30px -9px rgba(0,0,0,0.75);
+    }
+}

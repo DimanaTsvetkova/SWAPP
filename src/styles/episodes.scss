@@ -1,0 +1,18 @@
+@import './global';
+
+.main-container{
+    background: $light-background-color;
+    display: grid;
+    padding: 3em 0 0 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto ;
+    gap: 5em;
+
+    .episode-card{
+        margin: auto;
+        margin: auto;
+        border: 1px solid $light-card-border;
+        border-radius: 8px;
+    }
+
+}

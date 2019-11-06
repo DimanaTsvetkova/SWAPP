@@ -1,0 +1,27 @@
+@import './global';
+.nav{
+    display: flex;
+    justify-content: space-between;
+    background: #333333;
+
+    .nav-logo{
+        color: $logo-color;
+        font-family: $logo-font;
+        text-decoration: none;
+        font-size: 1.5em;
+        padding: 0.5em;
+        
+    }
+    .r-links{
+        font-family: $main-font, serif;
+        font-weight: bold;
+        list-style-type: none;
+        display: inherit;
+        margin: auto 0;
+        .link{
+            text-decoration: none;
+            color: $light-navbar-font;
+            margin: 1em;
+        }
+    }
+}

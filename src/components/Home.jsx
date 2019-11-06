@@ -4,6 +4,7 @@ import gql from 'graphql-tag.macro';
 
 import Login from '../components/Login';
 import Pages from '../components/Pages';
+import Navbar from './Navbar';
 
 const AUTH_QUERY = gql`
 query AuthQuery{
@@ -12,11 +13,12 @@ query AuthQuery{
 
 const Home = () => {
     const { data, loading, error } = useQuery(AUTH_QUERY);
+    console.log(data)
     if(loading) return <span>loading</span>;
     if(error) return <span>error</span>;
     return (
         <div>
-            {data.authenticated ? <Pages /> : <Login />}
+            {data.authenticated ? <> <Navbar/> <Pages /> </> : <Login />}
         </div>
     )
 }

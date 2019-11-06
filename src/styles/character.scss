@@ -1,0 +1,82 @@
+@import "./global";
+.character-container{
+    background: $light-background-color;
+    font-family: $jedy-font;
+    font-weight: 100;
+    letter-spacing: 3px;
+    min-height: 100vh;
+    padding: 1em 3em;
+    h1, h3, h5{
+        color:$light-navbar-font ;
+    }
+    .name{
+        border-bottom: 2px solid #333333;
+        padding: 1em;
+        text-align: center;
+        
+    }
+    .container{
+    display: flex;
+    justify-content: center;
+
+   
+    .col-l, .col-r{
+        width: 40%;
+        display: flex;
+        flex-flow: column;
+        margin: 1em;
+        border-radius: 15px;
+        border: 1px solid $light-card-border;
+    }
+    .col-r{
+        h2{
+            color: $light-font-color;
+
+        }
+         padding: 1em;
+            margin: 0 auto;
+        img{
+            width: 20%;
+        }
+    }
+    .col-l{
+        background: #ffffff;
+
+        .sp{
+            color: $light-font-color;
+            color: #4E5B6E;
+            margin: 0 0 0 1.3em;
+        }
+        h3{
+            padding: 1em;
+            margin: auto;
+        }
+        img{
+            margin: auto;
+            width: 75%;
+        }
+    }
+    .mini-card{
+        background: #ffffff;
+        display: flex;
+      margin: 1em;
+      border: 1px solid $light-card-border;;
+      border-radius: 12px ;
+        img{
+         border-radius: 12px 0 0 12px ;
+
+        }
+    }
+    .starship-mini-card{
+        .s-name{
+        color: $light-navbar-font ;
+        font-size: 1em;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        }
+        text-decoration: none;
+    }
+}
+
+}

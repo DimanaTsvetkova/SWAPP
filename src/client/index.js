@@ -14,7 +14,7 @@ const httpLink = createHttpLink({
       cache,
       link: authLink.concat(httpLink),
       typeDefs,
-      resolvers: {},
+      resolvers: {}
   });
 
   cache.writeData({

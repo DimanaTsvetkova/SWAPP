@@ -14,13 +14,17 @@ class LoginForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
     this.props.login({ variables: { email: this.state.email, password: this.state.password } });
+    
   };
   render() {
     return (
       <div className="main-bg">
         <div className="container">
           <h1 className="logo">SWAPP</h1>
-
+          {
+            this.props.error? <h4 className="err" style={{opacity:1}}>Invalid creditentials</h4> :<h4 className="err" style={{opacity:0}}>Invalid creditentials</h4>
+           
+          }
           <form onSubmit={this.handleSubmit}>
             <label className="err"></label>
             <input className="input-field" name="email" type="email" value={this.state.email} onChange={this.setCreditentials}/>

@@ -3,6 +3,18 @@
     src: url('../assets/fonts/SfDistantGalaxy.ttf');
 
 }
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../assets/fonts/MontserratMedium-nRxlJ.ttf');
+
+}
+@font-face {
+    font-family: 'Jedy';
+    src: url('../assets/fonts/Starjedi.ttf');
+
+}
+$jedy-font: 'Jedy';
+$main-font: 'Montserrat';
 $error-color: #E67453;
 $logo-color:#FFE300;
 $logo-font: 'Galaxy';
@@ -26,4 +38,6 @@ $light-input-font:#3C4858;
 $light-navbar-background: #000;
 $light-navbar-border: #333;
 $light-navbar-font: #4BD5EE;
+
+
 

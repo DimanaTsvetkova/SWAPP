@@ -1,0 +1,114 @@
+@import './global';
+
+.episode-container {
+    display: grid;
+    background: $light-background-color;
+    display: grid;
+    // padding: 3em 0 0 0;
+    grid-template-columns: repeat(1, 4fr);
+    grid-template-rows: 1fr 1fr 1fr ;
+    // gap: 5em;
+    img { 
+        width: 40%;
+
+    }
+    .description, .episode{
+        background: #ffffff;
+        width: 75%;
+        margin: 1em auto;
+        border: 1px solid $light-card-border;
+        border-radius: 10px;
+    }
+
+    .episode {
+        display: flex;
+        text-align: center;
+  
+        img{
+            border-radius: 10px 0 0 10px;
+        }
+        div{
+            margin: auto;
+            font-family: $jedy-font;
+            h2{
+                color:$light-navbar-font ;
+                width: 100%;
+                font-size: 2em;
+            }
+            h3{
+                font-size: 1.3em;
+                color: $light-font-color;
+            }
+            flex-flow: column;
+
+        }
+
+    }
+
+    .description {
+        background: #ffffff;
+        width: 75%;
+        margin: auto;
+        padding: 1em;
+        
+        .det{
+            margin: 0 0  0.5em 0;
+
+            font-family: $main-font;
+            color: $light-font-color;
+            span{
+                color: $light-navbar-font;
+
+            }
+
+        }
+    }
+
+    .characters {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 30% 30% 30%;
+        grid-auto-rows: auto;
+        grid-template-rows: 1fr 1fr;
+        margin: 1em auto;
+        justify-content: center;
+        .character {
+            text-decoration: none;
+            .mini-card {
+                border: 1px solid $light-card-border;
+                border-radius: 15px;
+                display: flex;
+                width: 70%;
+                background: #ffffff;
+                height: 70%;
+                justify-content: space-around;
+                margin: auto;
+                .name{
+                    color:$light-navbar-font ;
+                    font-family: $jedy-font;
+                    font-weight: lighter;
+                    font-size: 1em;
+                    margin: auto;
+                    width: 34%;
+                }
+            }
+        }
+     
+    
+    
+    }
+    .load-more{
+        background: $light-btn-background;
+        color: $light-btn-font;
+        width: 25%;
+        font-family: $jedy-font;
+        font-size: 1.5em;
+        margin:0 auto 1em auto;
+        border: 1px solid $light-btn-border;
+        border-radius: 15px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
