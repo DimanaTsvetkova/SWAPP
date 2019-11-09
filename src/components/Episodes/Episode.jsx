@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/react-hooks";
-import CharacterMiniCard from "../Characters/CharacterMiniCard";
+import MiniCard from "../../pages/MiniCard";
 import '../../styles/episode.scss'
 
 const EPISODE_QUERY = gql`
@@ -46,9 +46,34 @@ function Episode() {
 
   if (loading) return <span>loading</span>
   if (error) return <span>error</span>
-  let { episode } = data
-  let { edges } = data.episode.people;
-  console.log(episode)
+  let { episode } = data;
+  let { edges, pageInfo } = data.episode.people;
+ let {hasNextPage, endCursor} = pageInfo;
+
+ const loadMore = () => {
+    fetchMore({
+      variables: {
+        first: 5,
+        after: endCursor
+      },
+      updateQuery: (prev, { fetchMoreResult: { episode } }) => {
+        if (!hasNextPage) {
+          return prev;
+        }
+
+        return {
+          episode: {
+            ...episode,
+            people: {
+              ...prev.episode.people,
+              ...episode.people,
+              edges: [...prev.episode.people.edges, ...episode.people.edges]
+            }
+          }
+        };
+      }
+    });
+  };
 
   return (
     <div className="episode-container">
@@ -71,13 +96,16 @@ function Episode() {
         {
           edges.map(edge => (
             <Link to={`/characters/${edge.node.id}`} key={edge.node.id} className="character">
-              <CharacterMiniCard person={edge.node} />
+              <MiniCard person={edge.node} />
             </Link>
           ))
         }
 
       </div>
-      <button className="load-more">Load more</button>
+      {
+        hasNextPage ? <button className="load-more" onClick={loadMore}>Load more</button> : ""
+      }
+      
 
     </div>
 

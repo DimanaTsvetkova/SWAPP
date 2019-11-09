@@ -1,0 +1,121 @@
+@import "./partials/global";
+.m-container {
+    background: $light-background-color;
+    font-family: $jedy-font;
+    font-weight: 100;
+    letter-spacing: 3px;
+    min-height: 100vh;
+    padding: 1em 3em;
+
+    h1,
+    h3,
+    h5 {
+        color: $light-navbar-font;
+    }
+
+    .name {
+        border-bottom: 2px solid #333333;
+        padding: 1em;
+        text-align: center;
+
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+
+
+        .col-l,
+        .col-r {
+            width: 40%;
+            display: flex;
+            flex-flow: column;
+            margin: 1em;
+            border-radius: 15px;
+            border: 1px solid $light-card-border;
+        }
+
+        .col-r {
+            padding: 1em;
+            margin: 0 auto;
+            text-align: center;
+            .link{
+                margin: 1em 0;
+            }
+            h2 {
+                color: $light-font-color;
+
+            }
+
+
+            img {
+                width: 20%;
+            }
+        }
+
+        .col-l {
+            background: #ffffff;
+
+            .sp {
+                color: $light-font-color;
+                color: #4E5B6E;
+                margin: 0 0 0 1.3em;
+            }
+            h5{
+                padding: 1em 4em;
+            }
+
+            h3 {
+                padding: 1em;
+                margin: auto;
+            }
+
+            img {
+                margin: auto;
+                width: 75%;
+            }
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 868px) {
+    .m-container {
+        .name {
+            margin: 0 0 1em;
+            font-size: 2em;
+        }
+
+        .container {
+            flex-flow: column;
+
+            .col-l {
+                width: 80%;
+                margin: auto;
+
+                h3 {
+                    font-size: 1.4em;
+                    ;
+                }
+
+                img {
+                    width: 100%;
+                }
+
+                h5 {
+                    padding: 0.4em;
+                }
+            }
+
+            .col-r{
+                h2{
+                    text-align: center;
+                }
+                width: 80%;
+
+            }
+        }
+
+    }
+}

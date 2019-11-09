@@ -2,9 +2,7 @@ import React from 'react';
 import gql from 'graphql-tag';
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/react-hooks";
-
-import CharacterCard from "../Characters/CharacterCard";
-import "../../styles/character.scss";
+import DetailsPage from '../../pages/DeatailsPage';
 export const CHARACTER_QUERY = gql `
   query Character ($characterId: ID!)  {
       person(id: $characterId) {
@@ -36,13 +34,13 @@ function Character(){
     let {characterId} = useParams();
     
     
-    const { data, loading, error, fetchMore } = useQuery(CHARACTER_QUERY, {
+    const { data, loading, error } = useQuery(CHARACTER_QUERY, {
         variables: { characterId}
     })  
     if(loading) return <span>loading</span>
     if (error) return <span>error</span>
         return(
-            <CharacterCard charData={data.person} key={data.person.id}/>
+            <DetailsPage  data={data.person}  key={data.person.id}/>
         )
 }  
 

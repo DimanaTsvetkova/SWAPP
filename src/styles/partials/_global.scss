@@ -1,17 +1,23 @@
 @font-face {
     font-family: 'Galaxy';
-    src: url('../assets/fonts/SfDistantGalaxy.ttf');
+    src: url('../../assets/fonts/SfDistantGalaxy.ttf');
 
 }
 @font-face {
     font-family: 'Montserrat';
-    src: url('../assets/fonts/MontserratMedium-nRxlJ.ttf');
+    src: url('../../assets/fonts/MontserratMedium-nRxlJ.ttf');
 
 }
 @font-face {
     font-family: 'Jedy';
-    src: url('../assets/fonts/Starjedi.ttf');
+    src: url('../../assets/fonts/Starjedi.ttf');
 
+}
+*{
+    outline : none;
+}
+.link{
+    text-decoration: none;
 }
 $jedy-font: 'Jedy';
 $main-font: 'Montserrat';

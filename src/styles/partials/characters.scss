@@ -1,0 +1,50 @@
+@import "./global";
+    
+.characters {
+    display: grid;
+    width: 87%;
+    grid-template-columns:  repeat(3, 1fr);;
+    margin: 1em auto;
+    justify-content: center;
+    gap: 1em;
+    grid-auto-rows: 1fr;
+    .character {
+        text-decoration: none;
+       @import "../partials/minicard.scss";
+    }
+}
+
+.load-more{
+    background: $light-btn-background;
+    color: $light-btn-font;
+    width: 25%;
+    font-family: $jedy-font;
+    font-size: 1.5em;
+    margin:0 auto 1em auto;
+    border: 1px solid $light-btn-border;
+    border-radius: 15px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.con{
+    display: flex;
+    flex-flow: column;
+}
+
+
+@media screen and (max-width: 800px) {
+
+        .characters {
+            grid-template-columns: repeat(1, 1fr);
+             grid-auto-rows: 2fr;
+
+            width: 80%;
+
+           
+        }
+        .load-more{
+            width: 50%;
+            padding: 0.3em;
+        }
+    }

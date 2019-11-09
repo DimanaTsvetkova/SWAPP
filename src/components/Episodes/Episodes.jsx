@@ -25,7 +25,6 @@ function Episodes(){
     const {data, loading, error} = useQuery(ALL_EPISODES);
     if (loading) return <span>loading</span>;
     if (error) return <p>Error on getting all episodes</p>;
-    console.log(data)
     const {edges} = data.allEpisodes;
     return (
         <div className="main-container">

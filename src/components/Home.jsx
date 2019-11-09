@@ -13,7 +13,6 @@ query AuthQuery{
 
 const Home = () => {
     const { data, loading, error } = useQuery(AUTH_QUERY);
-    console.log(data)
     if(loading) return <span>loading</span>;
     if(error) return <span>error</span>;
     return (

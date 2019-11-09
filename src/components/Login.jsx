@@ -14,7 +14,7 @@ mutation signIn($email: String!, $password: String!) {
 
  function Login() {
     const client = useApolloClient();
-    const [login, { loading, error }] = useMutation(LOG_IN,{
+    const [login, {  error }] = useMutation(LOG_IN,{
         onCompleted: ( data ) => {
             localStorage.setItem("token", data.signIn.token);
             client.writeData({ data: { authenticated: true } });
@@ -22,8 +22,6 @@ mutation signIn($email: String!, $password: String!) {
           }
     });
    
-    // if(loading) return <span>loading</span>
-    // if(error) return <span>error</span> 
     return <LoginForm login={login} error = {error}/>
   }
 
